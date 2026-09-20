@@ -1,10 +1,35 @@
 {
   "default": "original",
   "palettes": [
-    { "id": "original", "name": "Sturdy", "file": "palettes/original.json" },
-    { "id": "soft", "name": "Jolly", "file": "palettes/soft.json" },
-    { "id": "neon", "name": "Chaos", "file": "palettes/neon.json" },
-    { "id": "greyscale", "name": "Accounts", "file": "palettes/greyscale.json" },
-    { "id": "skin-deep", "name": "Rawhide", "file": "palettes/skin-deep.json" }
+    {
+      "id": "original",
+      "name": "Sturdy",
+      "file": "palettes/original.json"
+    },
+    {
+      "id": "soft",
+      "name": "Jolly",
+      "file": "palettes/soft.json"
+    },
+    {
+      "id": "neon",
+      "name": "Chaos",
+      "file": "palettes/neon.json"
+    },
+    {
+      "id": "greyscale",
+      "name": "Accounts",
+      "file": "palettes/greyscale.json"
+    },
+    {
+      "id": "skin-deep",
+      "name": "Rawhide",
+      "file": "palettes/skin-deep.json"
+    },
+    {
+      "id": "wispy",
+      "name": "Wispy",
+      "file": "palettes/wispy.json"
+    }
   ]
 }
