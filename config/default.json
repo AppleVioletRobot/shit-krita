@@ -5,7 +5,7 @@
   "background": "#ffffff",
   "defaultColour": "#252321",
   "defaultWidth": 5,
-  "widths": [1.5, 5, 14],
+  "widths": [2, 5, 14],
   "colours": [
     { "name": "Charcoal", "hex": "#252321" },
     { "name": "Grey", "hex": "#8a8985" },
