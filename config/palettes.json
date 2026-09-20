@@ -12,6 +12,11 @@
       "file": "palettes/soft.json"
     },
     {
+      "id": "wispy",
+      "name": "Wispy",
+      "file": "palettes/wispy.json"
+    },
+    {
       "id": "neon",
       "name": "Chaos",
       "file": "palettes/neon.json"
@@ -25,11 +30,6 @@
       "id": "skin-deep",
       "name": "Rawhide",
       "file": "palettes/skin-deep.json"
-    },
-    {
-      "id": "wispy",
-      "name": "Wispy",
-      "file": "palettes/wispy.json"
     }
   ]
 }
