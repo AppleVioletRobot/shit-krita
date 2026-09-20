@@ -2,6 +2,14 @@
   "name": "Wispy",
   "colours": [
     {
+      "name": "Black",
+      "hex": "#171717"
+    },
+    {
+      "name": "White",
+      "hex": "#FFFFFF"
+    },
+    {
       "name": "Yellow",
       "hex": "#F2E8C9"
     },
@@ -19,7 +27,7 @@
     },
     {
       "name": "Aqua",
-      "hex": "#D4F3F2"
+      "hex": "#E5F8F7"
     },
     {
       "name": "Red",
@@ -27,11 +35,11 @@
     },
     {
       "name": "Purple",
-      "hex": "#DADBF0"
+      "hex": "#E4D8EE"
     },
     {
       "name": "Blue",
-      "hex": "#D4D5EA"
+      "hex": "#D4E4F2"
     }
   ]
 }
