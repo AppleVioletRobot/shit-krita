@@ -41,3 +41,8 @@
 /* Smaller SHIT FLIPA stage: 60% of available canvas area, centred both ways. */
 .flipa-mode .canvas-wrap{align-items:center;justify-content:center}
 .flipa-mode .canvas-stack{width:60%;height:60%}
+
+
+/* SHIT FLIPA stage correction: keep the useful width, shrink only the height. */
+.flipa-mode .canvas-wrap{align-items:center;justify-content:center}
+.flipa-mode .canvas-stack{width:100%;height:60%}
