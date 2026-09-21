@@ -16,3 +16,9 @@
 /* Keep the frame counter snug between navigation arrows. */
 .flipa-nav #frame-count{min-width:34px;margin:0 -2px}
 @media(max-width:760px){.flipa-nav #frame-count{min-width:30px;margin:0 -3px}}
+
+/* Tiny vertical squeeze: preserve chunky TURN, make the whole tool rail fit cleanly. */
+.turn-svg{width:23px;height:23px}
+.tools{gap:11px}
+.tool-group,.widths{gap:6px}
+@media(max-width:760px){.tools{gap:6px}.tool-group,.widths{gap:5px}.turn-svg{width:20px;height:20px}.file-actions{gap:4px}.file-actions button{min-height:28px;padding:3px 1px}}
