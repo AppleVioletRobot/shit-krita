@@ -22,3 +22,17 @@
 .tools{gap:11px}
 .tool-group,.widths{gap:6px}
 @media(max-width:760px){.tools{gap:6px}.tool-group,.widths{gap:5px}.turn-svg{width:20px;height:20px}.file-actions{gap:4px}.file-actions button{min-height:28px;padding:3px 1px}}
+
+
+/* SHIT FLIPA stage: full width, two-thirds height, centred between fixed control bars. */
+.flipa-mode .canvas-wrap{padding:0;align-items:center}
+.flipa-mode .canvas-stack{width:100%;height:66.6667%}
+.flipa-mode .flipa-bar{left:92px;right:0;max-width:none;border-radius:0;box-shadow:none}
+.flipa-mode .flipa-nav{top:64px}
+.flipa-mode .flipa-commands{bottom:0;justify-content:flex-end}
+@media(max-width:760px){
+  .flipa-mode .canvas-wrap{padding:0}
+  .flipa-mode .flipa-bar{left:62px;right:0;max-width:none}
+  .flipa-mode .flipa-nav{top:56px}
+  .flipa-mode .flipa-commands{bottom:0}
+}
