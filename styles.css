@@ -12,3 +12,7 @@
 
 /* Project persistence lives in the scrolling top animation bar. */
 .flipa-nav{overflow-x:auto;overflow-y:hidden;justify-content:flex-start;-webkit-overflow-scrolling:touch;scrollbar-width:none}.flipa-nav::-webkit-scrollbar{display:none}.flipa-nav>*{flex:0 0 auto}.flipa-divider{width:1px;height:25px;background:#171717;opacity:.35;margin:0 2px}.flipa-bar #project-save,.flipa-bar #project-open{min-width:31px;width:31px;padding:0;display:grid;place-items:center}
+
+/* Keep the frame counter snug between navigation arrows. */
+.flipa-nav #frame-count{min-width:34px;margin:0 -2px}
+@media(max-width:760px){.flipa-nav #frame-count{min-width:30px;margin:0 -3px}}
