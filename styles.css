@@ -36,3 +36,8 @@
   .flipa-mode .flipa-nav{top:56px}
   .flipa-mode .flipa-commands{bottom:0}
 }
+
+
+/* Smaller SHIT FLIPA stage: 60% of available canvas area, centred both ways. */
+.flipa-mode .canvas-wrap{align-items:center;justify-content:center}
+.flipa-mode .canvas-stack{width:60%;height:60%}
