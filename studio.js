@@ -57,7 +57,7 @@
  function playFlipa(){if(playing){stopFlipa();showFrame(frameIndex);return}if(frames.length<2)return;syncCurrentFrame();playing=true;clearOnion();let i=0;document.querySelector('#frame-play').textContent='■';showData(frames[0]);playTimer=setInterval(()=>{i=(i+1)%frames.length;showData(frames[i])},160)}
  flipaToggle.onclick=()=>setFlipa(!flipa);
  document.querySelector('#frame-prev').onclick=()=>{if(playing)return;syncCurrentFrame();showFrame(frameIndex-1)};
- document.querySelector('#frame-next').onclick=()=>{if(playing)return;syncCurrentFrame();showFrame(frameIndex+1)};
+ document.querySelector('#frame-next').onclick=()=>{if(playing)return;syncCurrentFrame();showFrame(frameIndex+1)};document.querySelector('#frame-left').onclick=()=>{if(playing||frameIndex===0)return;syncCurrentFrame();[frames[frameIndex-1],frames[frameIndex]]=[frames[frameIndex],frames[frameIndex-1]];showFrame(frameIndex-1)};document.querySelector('#frame-right').onclick=()=>{if(playing||frameIndex===frames.length-1)return;syncCurrentFrame();[frames[frameIndex],frames[frameIndex+1]]=[frames[frameIndex+1],frames[frameIndex]];showFrame(frameIndex+1)};
  document.querySelector('#frame-add').onclick=()=>{if(playing)return;syncCurrentFrame();frames.splice(frameIndex+1,0,blankFrame());showFrame(frameIndex+1)};
  document.querySelector('#frame-dup').onclick=()=>{if(playing)return;syncCurrentFrame();frames.splice(frameIndex+1,0,frames[frameIndex]);showFrame(frameIndex+1)};
  document.querySelector('#frame-delete').onclick=()=>{if(playing||frames.length<=1)return;frames.splice(frameIndex,1);frameIndex=Math.min(frameIndex,frames.length-1);showFrame(frameIndex)};
