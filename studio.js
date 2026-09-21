@@ -47,7 +47,7 @@
   function captureFrame(){return canvas.toDataURL('image/png')}
  function syncCurrentFrame(){if(flipa&&frames.length)frames[frameIndex]=captureFrame()}
  function blankFrame(){const c=document.createElement('canvas');c.width=canvas.width;c.height=canvas.height;const x=c.getContext('2d');x.fillStyle=background;x.fillRect(0,0,c.width,c.height);return c.toDataURL('image/png')}
- function updateFrameUI(){frameCount.textContent=(frameIndex+1)+' / '+frames.length;document.querySelector('#frame-prev').disabled=frameIndex===0;document.querySelector('#frame-next').disabled=frameIndex===frames.length-1}
+ function updateFrameUI(){frameCount.textContent=(frameIndex+1)+' / '+frames.length;document.querySelector('#frame-prev').disabled=frameIndex===0;document.querySelector('#frame-next').disabled=frameIndex===frames.length-1;document.querySelector('#frame-left').disabled=frameIndex===0;document.querySelector('#frame-right').disabled=frameIndex===frames.length-1}
  function clearOnion(){onionCtx.clearRect(0,0,onionCanvas.width,onionCanvas.height)}
  function renderOnion(i){clearOnion();if(!flipa||playing||i<=0||!frames[i-1])return;const img=new Image();img.onload=()=>{const{w,h}=cssSize();onionCtx.clearRect(0,0,w,h);onionCtx.save();onionCtx.globalAlpha=.28;onionCtx.drawImage(img,0,0,w,h);onionCtx.restore()};img.src=frames[i-1]}
  function drawFrameWithOnion(i){if(!frames.length)return;const img=new Image();img.onload=()=>{const{w,h}=cssSize();ctx.clearRect(0,0,w,h);fillBackground();ctx.drawImage(img,0,0,w,h);renderOnion(i)};img.src=frames[i]}
