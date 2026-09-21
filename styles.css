@@ -11,4 +11,4 @@
 #onion-canvas{position:absolute;inset:0;z-index:2;pointer-events:none;background:transparent!important;box-shadow:none!important;opacity:1}#canvas{position:relative;z-index:1}
 
 /* Project persistence lives in the scrolling top animation bar. */
-.flipa-nav{overflow-x:auto;overflow-y:hidden;justify-content:flex-start;-webkit-overflow-scrolling:touch;scrollbar-width:none}.flipa-nav::-webkit-scrollbar{display:none}.flipa-nav>*{flex:0 0 auto}.flipa-divider{width:1px;height:25px;background:#171717;opacity:.35;margin:0 2px}.flipa-bar #project-save,.flipa-bar #project-open{min-width:max-content;padding:0 9px}
+.flipa-nav{overflow-x:auto;overflow-y:hidden;justify-content:flex-start;-webkit-overflow-scrolling:touch;scrollbar-width:none}.flipa-nav::-webkit-scrollbar{display:none}.flipa-nav>*{flex:0 0 auto}.flipa-divider{width:1px;height:25px;background:#171717;opacity:.35;margin:0 2px}.flipa-bar #project-save,.flipa-bar #project-open{min-width:31px;width:31px;padding:0;display:grid;place-items:center}
