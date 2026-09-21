@@ -24,8 +24,9 @@
   temp.fillStyle=colour;temp.fillRect(0,0,1,1);const c=temp.getImageData(0,0,1,1).data;
   // Fixed Shit Krita wash: near-white tint at top to the chosen colour at bottom.
   const g=ctx.createLinearGradient(0,0,0,h/dpr);
-  g.addColorStop(0,`rgb(${Math.round(255-(255-c[0])*.12)},${Math.round(255-(255-c[1])*.12)},${Math.round(255-(255-c[2])*.12)})`);
-  g.addColorStop(1,`rgb(${c[0]},${c[1]},${c[2]})`);
+  // Blunt five-step fade, with short blended joins rather than hard bands.
+  const tint=m=>`rgb(${Math.round(255-(255-c[0])*m)},${Math.round(255-(255-c[1])*m)},${Math.round(255-(255-c[2])*m)})`;
+  [[0,.12],[.16,.12],[.24,.30],[.40,.30],[.48,.50],[.64,.50],[.72,.72],[.88,.72],[.96,1],[1,1]].forEach(([p,m])=>g.addColorStop(p,tint(m)));
   ctx.save();ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle=g;ctx.fillRect(0,0,w/dpr,h/dpr);ctx.restore();saveLocal();
  }
  function workspaceImage(){return canvas.toDataURL('image/png')}function blankCanvas(){const{w,h}=cssSize();ctx.clearRect(0,0,w,h);fillBackground()}function showData(data){if(!data){blankCanvas();return}const img=new Image();img.onload=()=>{const{w,h}=cssSize();ctx.clearRect(0,0,w,h);fillBackground();ctx.drawImage(img,0,0,w,h)};img.src=data}function switchWorkspace(){if(drawing)return;if(workspace==='main'){mainData=workspaceImage();workspace='scratch';showData(scratchData)}else{scratchData=workspaceImage();workspace='main';showData(mainData)}const n=document.querySelector('#workspace-name'),b=document.querySelector('#workspace-toggle');n.innerHTML=workspace==='main'?'<svg viewBox="0 0 28 28"><rect x="7" y="4" width="14" height="11" rx="1"/><path d="M14 15v3M10 24l4-6 4 6M8 20h12"/></svg>':'<svg viewBox="0 0 28 28"><path d="M4 16c2-9 5 7 8-4s3 12 6 1 4 7 6-2M5 20c5-5 8 5 12 0s5 2 7-1"/></svg>';b.classList.toggle('scratch',workspace==='scratch');b.setAttribute('aria-label',workspace==='main'?'Switch to scratch pad':'Switch to main canvas')}
