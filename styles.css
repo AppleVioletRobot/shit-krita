@@ -22,9 +22,3 @@
 .tools{gap:11px}
 .tool-group,.widths{gap:6px}
 @media(max-width:760px){.tools{gap:6px}.tool-group,.widths{gap:5px}.turn-svg{width:20px;height:20px}.file-actions{gap:4px}.file-actions button{min-height:28px;padding:3px 1px}}
-
-
-/* SHIT FLIPA: the grey workspace is the stage; the white frame is a separate centred object. */
-.flipa-mode .canvas-wrap{padding:0;align-items:center;justify-content:center}
-.flipa-mode .canvas-stack{width:auto;height:auto;flex:0 0 auto}
-.flipa-mode .canvas-wrap canvas{width:auto;height:auto}
