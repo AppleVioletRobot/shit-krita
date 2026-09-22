@@ -28,3 +28,5 @@
 .flipa-mode .canvas-wrap{padding:0;align-items:center;justify-content:center}
 .flipa-mode .canvas-stack{width:auto;height:auto;flex:0 0 auto}
 .flipa-mode .canvas-wrap canvas{width:auto;height:auto}
+
+#project-save.saved{color:#2f8f46}
