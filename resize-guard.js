@@ -1,15 +1,12 @@
-// Mobile browsers can fire window resize events when opening/closing native
-// Save/Share UI. Those height-only viewport changes must not destructively
-// rescale the drawing. Let genuine width changes (rotation/window resizing)
-// through to studio.js, but swallow height-only resize events first.
+// Shit Krita is a portrait-first drawing object. Mobile browser UI, native
+// Save/Share sheets and phone rotation can all fire window resize events.
+// Once the canvas has been established, none of those transient viewport
+// changes should destructively rescale the drawing. Desktop keeps the normal
+// responsive resize behaviour from studio.js.
 (()=>{
-  let lastWidth=window.innerWidth;
+  const mobile=matchMedia('(pointer: coarse)').matches && Math.min(screen.width,screen.height)<=760;
+  if(!mobile)return;
   window.addEventListener('resize',e=>{
-    const width=window.innerWidth;
-    if(Math.abs(width-lastWidth)<2){
-      e.stopImmediatePropagation();
-      return;
-    }
-    lastWidth=width;
+    e.stopImmediatePropagation();
   },true);
 })();
